@@ -3,7 +3,7 @@ import os
 import time
 
 if __name__ == "__main__":
-    save_dir = os.path.join(os.getcwd(), "app")
+    save_dir = os.getcwd()
     file_dir = os.path.join(save_dir, "test.xlsx")
 
     if os.path.exists(file_dir):
