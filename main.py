@@ -3,13 +3,16 @@ import os
 import time
 
 if __name__ == "__main__":
-    if os.path.exists("test.xlsx"):
-        wb = openpyxl.load_workbook("test.xlsx")
+    save_dir = os.path.join(os.getcwd(), "app")
+    file_dir = os.path.join(save_dir, "test.xlsx")
+
+    if os.path.exists(file_dir):
+        wb = openpyxl.load_workbook(file_dir)
         print("이미 파일이 존재하여 열었음")
 
     else:
         wb = openpyxl.Workbook()
-        wb.save("test.xlsx")
+        wb.save(file_dir)
         print("파일이 존재하지않아 생성하고 저장함")
 
     while True:
